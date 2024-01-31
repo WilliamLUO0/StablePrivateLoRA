@@ -12,4 +12,4 @@ However, we empirically disclose that PrivateLoRA has the issue of unstable opti
 
 ### Stable PrivateLora: SPLoRA.py  SPLoRA.sh
 
-### Dataset: [Pokemon Dataset](https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions), [CelebA Dataset](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), CelebA_Small Dataset: ./dataset/CelebA_Small, CeleBA_Large: ./dataset/CelebA_Large.
+### Dataset: [Pokemon Dataset](https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions), [CelebA Dataset](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
