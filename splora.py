@@ -1140,7 +1140,7 @@ class NetworkTrainer:
 
                     loss_adversarial = compute_attack_loss(batch) * (batch["mia_label"].to(accelerator.device) == 1)
 
-                    loss = loss_lora / (args.param_beta + args.param_alpha * loss_adversarial)
+                    loss = loss_lora / (args.param_beta + args.param_alpha * loss_adversarial + 1e-5)
 
 
                     accelerator.backward(loss)
