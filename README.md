@@ -13,3 +13,11 @@ However, we empirically disclose that PrivateLoRA has the issue of unstable opti
 ### Stable PrivateLora: SPLoRA.py  SPLoRA.sh
 
 ### Dataset: [Pokemon Dataset](https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions), [CelebA Dataset](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
+
+```bibtex
+@article{luo2024privacy,
+  title={Privacy-Preserving Low-Rank Adaptation for Latent Diffusion Models},
+  author={Luo, Zihao and Xu, Xilie and Liu, Feng and Koh, Yun Sing and Wang, Di and Zhang, Jingfeng},
+  journal={arXiv preprint arXiv:2402.11989},
+  year={2024}
+}
