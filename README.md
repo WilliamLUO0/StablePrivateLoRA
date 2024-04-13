@@ -14,6 +14,7 @@ However, we empirically disclose that PrivateLoRA has the issue of unstable opti
 
 ### Dataset: [Pokemon Dataset](https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions), [CelebA Dataset](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
 
+### Bibtex
 ```bibtex
 @article{luo2024privacy,
   title={Privacy-Preserving Low-Rank Adaptation for Latent Diffusion Models},
