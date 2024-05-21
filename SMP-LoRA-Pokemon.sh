@@ -2,7 +2,7 @@
 pretrained_model="/models/Stable-diffusion/v1-5-pruned.safetensors" 
 is_v2_model=0                             
 parameterization=0                        
-train_data_dir="./train/image_pokemon"              
+train_data_dir="./dataset/Pokemon"
 reg_data_dir=""                           
 network_module="networks.lora" 
 network_weights=""             
@@ -18,13 +18,13 @@ stop_text_encoder_training=0
 noise_offset="0"  
 keep_tokens=0   
 min_snr_gamma=0 
-lr="1e-5"
-unet_lr="1e-5"
+lr="1e-4"
+unet_lr="1e-4"
 text_encoder_lr="1e-5"
 lr_scheduler="constant" 
 lr_warmup_steps=0                   
 lr_restart_cycles=1                 
-output_name="pokemon_lora_mia_stable_alpha005_analysis_v3_1e5_"           
+output_name="SMP-LoRA-Pokemon"
 save_model_as="safetensors" 
 save_state=0 
 resume=""    
@@ -39,7 +39,7 @@ algo="lora"
 conv_dim=4   
 conv_alpha=4 
 dropout="0"  
-use_wandb=0 
+use_wandb=0
 wandb_api_key="" 
 log_tracker_name="" 
 
@@ -103,7 +103,7 @@ if [[ $log_tracker_name ]]; then extArgs+=("--log_tracker_name $log_tracker_name
 
 if [[ $lowram ]]; then extArgs+=("--lowram"); fi
 
-python -m accelerate.commands.launch ${launchArgs[@]} --num_cpu_threads_per_process=8 "./sd-scripts/splora.py" \
+python -m accelerate.commands.launch ${launchArgs[@]} --num_cpu_threads_per_process=8 "./sd-scripts/SMP-LoRA-Pokemon.py" \
   --enable_bucket \
   --pretrained_model_name_or_path=$pretrained_model \
   --train_data_dir=$train_data_dir \
@@ -126,7 +126,7 @@ python -m accelerate.commands.launch ${launchArgs[@]} --num_cpu_threads_per_proc
   --save_every_n_epochs=$save_every_n_epochs \
   --mixed_precision="fp16" \
   --save_precision="fp16" \
-  --seed="13" \
+  --seed="1337" \
   --cache_latents \
   --prior_loss_weight=1 \
   --max_token_length=225 \
