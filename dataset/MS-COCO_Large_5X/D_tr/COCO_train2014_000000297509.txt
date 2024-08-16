@@ -1,0 +1,1 @@
+Multiple objects are sitting in the foreground while someone works in the background
